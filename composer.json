@@ -1,0 +1,40 @@
+{
+    "name": "foodlz/laravel-ai-skills",
+    "description": "Adds a procedural knowledge skills layer to the Laravel AI SDK.",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": "^8.3",
+        "illuminate/cache": "^12.0|^13.0",
+        "illuminate/console": "^12.0|^13.0",
+        "illuminate/container": "^12.0|^13.0",
+        "illuminate/contracts": "^12.0|^13.0",
+        "illuminate/filesystem": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0",
+        "illuminate/view": "^12.0|^13.0",
+        "laravel/ai": "^0.6"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Foodlz\\LaravelAiSkills\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Foodlz\\LaravelAiSkills\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Foodlz\\LaravelAiSkills\\SkillsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

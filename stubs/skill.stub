@@ -1,0 +1,22 @@
+<?php
+
+namespace {{ namespace }};
+
+use Foodlz\LaravelAiSkills\Attributes\AsSkill;
+use Foodlz\LaravelAiSkills\Skills\Skill;
+use Foodlz\LaravelAiSkills\Support\Prompt;
+
+#[AsSkill(
+    name: '{{ name }}',
+    description: 'Describe when the LLM should call this skill.',
+)]
+class {{ class }} extends Skill
+{
+    /**
+     * The procedural knowledge returned when this skill is invoked.
+     */
+    public function guide(): Prompt|string
+    {
+        return Prompt::file(resource_path('{{ markdown_path }}'));
+    }
+}
